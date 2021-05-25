@@ -1,18 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/firstRelayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            tools:ignore="IncludeLayoutParam"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dark_grey"
+            android:layout_below="@+id/toolbar"/>
+        <TextView
+            android:id="@+id/home_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/daily_news"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_margin="15dp"
+            android:textColor="@color/light_blue_darken_2"/>
+
+        <TextView
+            android:id="@+id/textSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_title"
+            android:textSize="30sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textColor="@color/black"
+            android:text="@string/select"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textColor="@color/black"
+            android:text="@string/favourite_section"
+            android:layout_below="@+id/textSelect"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstRelayout"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/health"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:elevation="5dp"
+                android:fontFamily="serif"
+                android:textColor="@color/light_blue_darken_2"
+                android:layout_marginLeft="55dp"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/monochromatic"
+                android:elevation="5dp"
+                android:src="@drawable/ic_baseline_local_hospital_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/business"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:elevation="5dp"
+                android:fontFamily="serif"
+                android:textColor="@color/light_blue_darken_2"
+                android:layout_marginLeft="55dp"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/monochromatic"
+                android:elevation="5dp"
+                android:src="@drawable/ic_baseline_business_center_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stock News"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:elevation="5dp"
+                android:fontFamily="serif"
+                android:textColor="@color/light_blue_darken_2"
+                android:layout_marginLeft="55dp"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/monochromatic"
+                android:elevation="5dp"
+                android:src="@drawable/ic_baseline_attach_money_24"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/politics"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:elevation="5dp"
+                android:fontFamily="serif"
+                android:textColor="@color/light_blue_darken_2"
+                android:layout_marginLeft="55dp"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/monochromatic"
+                android:elevation="5dp"
+                android:src="@drawable/ic_baseline_account_balance_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sport"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:elevation="5dp"
+                android:fontFamily="serif"
+                android:textColor="@color/light_blue_darken_2"
+                android:layout_marginLeft="55dp"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/monochromatic"
+                android:elevation="5dp"
+                android:src="@drawable/ic_baseline_sports_cricket_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tech News"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:elevation="5dp"
+                android:fontFamily="serif"
+                android:textColor="@color/light_blue_darken_2"
+                android:layout_marginLeft="55dp"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/monochromatic"
+                android:elevation="5dp"
+                android:src="@drawable/ic_baseline_app_settings_alt_24"/> />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
