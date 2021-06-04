@@ -10,4 +10,6 @@
     <color name="light_blue_darken_2">#0288d1</color>
     <color name="dark_grey">#d3d3d3</color>
     <color name="monochromatic">#d4ebf2</color>
+    <color name="lite_blue">#f8fcfd</color>
+    <color name="lite_green">#8FBC8F</color>
 </resources>

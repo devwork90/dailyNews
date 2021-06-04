@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/lite_blue"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             layout="@layout/toolbar_main"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             tools:ignore="IncludeLayoutParam"/>
         <View
             android:layout_width="match_parent"
@@ -212,4 +212,23 @@
                 android:src="@drawable/ic_baseline_app_settings_alt_24"/> />
         </LinearLayout>
     </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/myNavBar" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/myNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff"
+        android:padding="0dp"
+        app:elevation="6dp"
+        app:itemIconSize="30dp"
+        android:elevation="5dp"
+        app:itemIconTint="@color/lite_green"
+        app:itemTextColor="@color/lite_green"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/navigation"/>
 </RelativeLayout>
